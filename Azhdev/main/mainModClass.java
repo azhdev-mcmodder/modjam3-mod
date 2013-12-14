@@ -1,6 +1,7 @@
 package Azhdev.main;
 
 import Azhdev.blocks.Blocks;
+import Azhdev.handlers.configHandler;
 import Azhdev.items.Items;
 import Azhdev.lib.Reference;
 import cpw.mods.fml.common.Mod;
@@ -15,12 +16,14 @@ public class mainModClass {
 	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent event){
+		configHandler.init(event.getSuggestedConfigurationFile());
 		Items.init();
 		Blocks.init();
 	}
 	@EventHandler
 	public void Init(FMLInitializationEvent event){
 		Items.addNames();
+		Blocks.addnames();
 	}
 	@EventHandler
 	public void PostInit(FMLPostInitializationEvent event){
