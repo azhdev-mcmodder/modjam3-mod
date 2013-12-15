@@ -11,9 +11,8 @@ public class configHandler {
 			Configuration config = new Configuration(file);
 			config.load();
 			
-			blockInfo.blockFood_ID = config.getBlock(blockInfo.blockFood_KEY, blockInfo.blockFood_DEFAULT).getInt() - 256;
+			blockInfo.blockFood_ID = config.getBlock(blockInfo.blockFood_KEY, blockInfo.blockFood_DEFAULT).getInt();
 			
 			ItemInfo.Spoon_ID = config.getItem(ItemInfo.Spoon_KEY, ItemInfo.Spoon_DEFAULT).getInt() - 256;
-			ItemInfo.handJuke_ID = config.getItem(ItemInfo.handJuke_KEY, ItemInfo.handJuke_DEFAULT).getInt() - 256;
 		}
 }

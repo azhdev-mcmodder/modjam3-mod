@@ -3,8 +3,11 @@ package Azhdev.items;
 import Azhdev.lib.status;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -24,16 +27,8 @@ public class ItemSpoon extends Item{
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register){
-		empty = register.registerIcon(ItemInfo.TEXTURE_LOC + ":" + ItemInfo.Spoon_ICON);
-		filled = register.registerIcon(ItemInfo.TEXTURE_LOC + ":" + ItemInfo.Spoon_FILLED);
-	}
-	
-	public Icon getIcon(int meta){
-		if(status.spoon_filled == true){
-			return filled;
-		}else{
-			return empty;
-		}
+		itemIcon = register.registerIcon(ItemInfo.TEXTURE_LOC + ":" + ItemInfo.Spoon_ICON);
+		filled = register.registerIcon(ItemInfo.TEXTURE_LOC + ":" + ItemInfo.Spoon_filled);
 	}
 	
 	@Override
