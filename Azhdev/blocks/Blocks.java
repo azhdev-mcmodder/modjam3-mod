@@ -17,4 +17,8 @@ public class Blocks {
 	public static void addnames(){
 		LanguageRegistry.addName(blockFood, blockInfo.blockFood_NAME);
 	}
+	
+	public static void registerTileEntities(){
+		GameRegistry.registerTileEntity(tileEntityFood.class, blockInfo.blockFood_KEY);
+	}
 }

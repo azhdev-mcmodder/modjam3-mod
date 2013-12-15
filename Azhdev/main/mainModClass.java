@@ -19,6 +19,8 @@ public class mainModClass {
 		configHandler.init(event.getSuggestedConfigurationFile());
 		Items.init();
 		Blocks.init();
+		
+		Blocks.registerTileEntities();
 	}
 	@EventHandler
 	public void Init(FMLInitializationEvent event){
