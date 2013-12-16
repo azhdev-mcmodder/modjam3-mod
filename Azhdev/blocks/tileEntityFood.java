@@ -9,19 +9,24 @@ public class tileEntityFood extends TileEntity{
 	public static boolean ready = true;
 	public static int uses = 5;
 	public tileEntityFood(){
+	
 	}
 	
 	@Override
 	public void writeToNBT(NBTTagCompound compound){
 		super.writeToNBT(compound);
-		NBTTagList nbttaglist = new NBTTagList();
 		
+		compound.setShort("uses", (short)uses);
+		compound.setBoolean("ready", ready);
 		
 	}
 	
     @Override
     public void readFromNBT(NBTTagCompound compound){
             super.readFromNBT(compound);
+            
+            uses = compound.getShort("uses");
+            ready = compound.getBoolean("ready");
     }
     
     @Override

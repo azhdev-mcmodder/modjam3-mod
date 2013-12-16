@@ -28,7 +28,7 @@ public class blockFood extends BlockContainer{
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister register){
-		blockIcon = register.registerIcon("aru:blockfood");
+		blockIcon = register.registerIcon(ItemInfo.TEXTURE_LOC + ":" + blockInfo.blockFood_ICON);
 	}
 	
 	   @Override
